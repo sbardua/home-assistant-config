@@ -1,0 +1,25 @@
+lightsTurnOnSet:
+  speech:
+    type: plain
+    text: "Ok"
+  action:
+    - service: switch.turn_on
+      data_template:
+        entity_id: switch.{{ house_room | replace(" ","_") }}_Lamp_1
+    - service: tts.amazon_polly_say
+      entity_id: media_player.mpd
+      data_template:
+        message: "<speak>Ok</speak>"
+
+lightsTurnOff:
+  speech:
+    type: plain
+    text: "Ok"
+  action:
+    - service: switch.turn_off
+      data_template:
+        entity_id: switch.{{ house_room | replace(" ","_") }}_Lamp_1
+    - service: tts.amazon_polly_say
+      entity_id: media_player.mpd
+      data_template:
+        message: "<speak>Ok</speak>"

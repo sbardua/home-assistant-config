@@ -1,0 +1,12 @@
+._*
+.DS_Store
+.ios.conf
+.uuid
+.HA_VERSION
+home-assistant.log
+home-assistant_v2.db
+secrets.yaml
+known_devices.yaml
+deps
+tts
+.cloud

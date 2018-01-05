@@ -1,0 +1,66 @@
+homeassistant:
+  name: !secret home_name
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: imperial
+  time_zone: !secret home_time_zone
+  customize: !include_dir_merge_named customizations/
+
+http:
+  api_password: !secret http_password
+
+discovery:
+  ignore:
+    - apple_tv
+
+#introduction:
+frontend:
+config:
+updater:
+conversation:
+history:
+logbook:
+map:
+sun:
+#emulated_hue:
+cloud:
+snips:
+
+panel_iframe:
+  nodered_flows:
+    title: Node-RED Flows
+    icon: mdi:nodejs
+    url: http://hassio.local:1880
+  pihole:
+    title: Pi-hole
+    icon: mdi:block-helper
+    url: http://hassio.local/admin/index.php
+
+tts:
+  - platform: google
+  - platform: amazon_polly
+    aws_access_key_id: !secret aws_access_key_id
+    aws_secret_access_key: !secret aws_secret_access_key
+    region_name: 'us-west-2'
+    text_type: ssml
+    voice: Brian
+
+media_player:
+  platform: mpd
+  host: 192.168.200.70
+
+mqtt:
+  broker: core-mosquitto
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  discovery: false
+  discovery_prefix: homeassistant
+
+light: !include_dir_list lights/
+switch: !include_dir_list switches/
+sensor: !include_dir_list sensors/
+group: !include_dir_merge_named groups/
+automation: !include_dir_list automations/
+script: !include_dir_merge_named scripts/
+intent_script: !include_dir_merge_named intents/
