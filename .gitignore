@@ -1,5 +1,6 @@
 ._*
 .DS_Store
+.insteon_cache
 .ios.conf
 .uuid
 .HA_VERSION

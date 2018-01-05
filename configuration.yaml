@@ -31,24 +31,24 @@ panel_iframe:
   nodered_flows:
     title: Node-RED Flows
     icon: mdi:nodejs
-    url: http://hassio.local:1880
+    url: !secret nodered_hostname
   pihole:
     title: Pi-hole
     icon: mdi:block-helper
-    url: http://hassio.local/admin/index.php
+    url: !secret pihole_hostname
 
 tts:
   - platform: google
   - platform: amazon_polly
     aws_access_key_id: !secret aws_access_key_id
     aws_secret_access_key: !secret aws_secret_access_key
-    region_name: 'us-west-2'
+    region_name: !secret aws_region
     text_type: ssml
     voice: Brian
 
 media_player:
   platform: mpd
-  host: 192.168.200.70
+  host: !secret mopidy_hostname
 
 mqtt:
   broker: core-mosquitto
@@ -56,6 +56,19 @@ mqtt:
   password: !secret mqtt_password
   discovery: false
   discovery_prefix: homeassistant
+
+hue:
+  bridges:
+    - host: !secret huebridge_hostname
+      allow_unreachable: True
+      allow_in_emulated_hue: False
+      allow_hue_groups: False
+
+insteon_local:
+  host: !secret insteon_hostname
+  username: !secret insteon_username
+  password: !secret insteon_password
+  timeout: 10
 
 light: !include_dir_list lights/
 switch: !include_dir_list switches/

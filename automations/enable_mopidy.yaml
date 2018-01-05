@@ -1,13 +1,13 @@
 id: enable_mopidy
 alias: Enable Mopidy
 initial_state: True
-hide_entity: True
+hide_entity: False
 trigger:
   - platform: homeassistant
     event: start
 action: 
-  - service: media_player.turn_on
-    entity_id: media_player.mpd
+#  - service: media_player.turn_on
+#    entity_id: media_player.mpd
   - service: tts.amazon_polly_say
     entity_id: media_player.mpd
     data_template:
