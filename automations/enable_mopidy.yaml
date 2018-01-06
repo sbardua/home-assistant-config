@@ -1,7 +1,7 @@
 id: enable_mopidy
 alias: Enable Mopidy
 initial_state: True
-hide_entity: False
+hide_entity: True
 trigger:
   - platform: homeassistant
     event: start
