@@ -1,6 +1,8 @@
 ._*
 .DS_Store
 .insteon_cache
+insteon_local_lights.conf
+phue.conf
 .ios.conf
 .uuid
 .HA_VERSION
@@ -10,4 +12,5 @@ secrets.yaml
 known_devices.yaml
 deps
 tts
+homebridge
 .cloud
