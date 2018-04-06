@@ -1,3 +1,0 @@
-platform: tplink
-host: !secret switch_kitchen_hostname
-name: 'Kitchen'

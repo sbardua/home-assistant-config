@@ -1,3 +1,0 @@
-platform: tplink
-host: !secret switch_playroom_hostname
-name: 'Play Room'

@@ -1,0 +1,3 @@
+platform: tplink
+host: !secret switch_jacobs_lamp_hostname
+name: 'Jacobs Lamp'

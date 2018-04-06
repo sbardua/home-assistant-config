@@ -1,0 +1,42 @@
+switch.jacobs_lamp:
+  hidden: true
+switch.play_room_lamp:
+  hidden: true
+switch.twinkle_lights:
+  hidden: true
+switch.desk_lamps:
+  hidden: true
+light.family_room:
+  hidden: true
+light.jacobs_room:
+  hidden: true
+light.kaylies_room:
+  hidden: true
+light.master_bedroom:
+  hidden: true
+light.office:
+  hidden: true
+light.floor_lamp_left_bottom:
+  hidden: true
+light.floor_lamp_left_top:
+  hidden: true
+light.floor_lamp_right_bottom:
+  hidden: true
+light.floor_lamp_right_top:
+  hidden: true
+group.family_room:
+    order: 1
+group.play_room:
+    order: 2
+group.office:
+    order: 3
+group.master_bedroom:
+    order: 4
+group.jacobs_bedroom:
+    order: 5
+group.kaylies_bedroom:
+    order: 6
+group.upstairs:
+    order: 7
+group.downstairs:
+    order: 8

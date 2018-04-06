@@ -1,0 +1,6 @@
+family_room:
+  name: Family Room
+  entities:
+    - light.accent_light
+    - light.floor_lamps
+    - light.twinkle_lights

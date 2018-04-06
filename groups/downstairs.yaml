@@ -1,0 +1,7 @@
+downstairs:
+  name: Downstairs
+  view: yes
+  entities:
+    - group.family_room
+    - group.play_room
+    - group.office

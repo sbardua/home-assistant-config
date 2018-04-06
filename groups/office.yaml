@@ -1,0 +1,4 @@
+office:
+  name: Office
+  entities:
+    - light.scotts_office_lamp

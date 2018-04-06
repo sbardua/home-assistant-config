@@ -1,0 +1,10 @@
+default_view:
+  name: Home
+  view: yes
+  entities:
+    - group.family_room
+    - group.play_room
+    - group.office
+    - group.master_bedroom
+    - group.jacobs_bedroom
+    - group.kaylies_bedroom

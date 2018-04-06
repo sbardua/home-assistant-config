@@ -1,0 +1,7 @@
+upstairs:
+  name: Upstairs
+  view: yes
+  entities:
+    - group.master_bedroom
+    - group.jacobs_bedroom
+    - group.kaylies_bedroom

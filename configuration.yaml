@@ -5,7 +5,7 @@ homeassistant:
   elevation: !secret home_elevation
   unit_system: imperial
   time_zone: !secret home_time_zone
-  customize: !include_dir_merge_named customizations/
+  customize: !include customize.yaml
 
 http:
   api_password: !secret http_password
@@ -24,12 +24,27 @@ logbook:
 map:
 sun:
 #emulated_hue:
+#snips:
+
 cloud:
-snips:
+  alexa:
+    filter:
+      include_domains:
+        - light
+      exclude_entities:
+        - light.family_room
+        - light.jacobs_room
+        - light.kaylies_room
+        - light.master_bedroom
+        - light.office
+        - light.floor_lamp_left_bottom
+        - light.floor_lamp_left_top
+        - light.floor_lamp_right_bottom
+        - light.floor_lamp_right_top
 
 panel_iframe:
-  nodered_flows:
-    title: Node-RED Flows
+  nodered:
+    title: Node-RED
     icon: mdi:nodejs
     url: !secret nodered_hostname
   pihole:
@@ -46,12 +61,12 @@ tts:
     text_type: ssml
     voice: Brian
 
-media_player:
-  platform: mpd
-  host: !secret mopidy_hostname
+#media_player:
+#  platform: mpd
+#  host: !secret mopidy_hostname
 
 mqtt:
-  broker: core-mosquitto
+  broker: mosquitto
   username: !secret mqtt_username
   password: !secret mqtt_password
   discovery: false
@@ -62,18 +77,18 @@ hue:
     - host: !secret huebridge_hostname
       allow_unreachable: True
       allow_in_emulated_hue: False
-      allow_hue_groups: False
+      allow_hue_groups: True
 
-insteon_local:
-  host: !secret insteon_hostname
-  username: !secret insteon_username
-  password: !secret insteon_password
-  timeout: 10
+#insteon_local:
+#  host: !secret insteon_hostname
+#  username: !secret insteon_username
+#  password: !secret insteon_password
+#  timeout: 10
 
 light: !include_dir_list lights/
 switch: !include_dir_list switches/
-sensor: !include_dir_list sensors/
+#sensor: !include_dir_list sensors/
 group: !include_dir_merge_named groups/
-automation: !include_dir_list automations/
+#automation: !include_dir_list automations/
 script: !include_dir_merge_named scripts/
-intent_script: !include_dir_merge_named intents/
+#intent_script: !include_dir_merge_named intents/

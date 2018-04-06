@@ -1,0 +1,5 @@
+play_room:
+  name: Play Room
+  entities:
+    - light.desk_lamps
+    - light.play_room_lamp

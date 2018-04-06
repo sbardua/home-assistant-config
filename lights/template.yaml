@@ -1,0 +1,42 @@
+platform: template
+lights:
+  jacobs_lamp:
+    friendly_name: "Jacobs Lamp"
+    turn_on:
+      service: switch.turn_on
+      data_template:
+        entity_id: switch.jacobs_lamp
+    turn_off:
+      service: switch.turn_off
+      data_template:
+        entity_id: switch.jacobs_lamp
+  play_room_lamp:
+    friendly_name: "Play Room Lamp"
+    turn_on:
+      service: switch.turn_on
+      data_template:
+        entity_id: switch.play_room_lamp
+    turn_off:
+      service: switch.turn_off
+      data_template:
+        entity_id: switch.play_room_lamp
+  twinkle_lights:
+    friendly_name: "Twinkle Lights"
+    turn_on:
+      service: switch.turn_on
+      data_template:
+        entity_id: switch.twinkle_lights
+    turn_off:
+      service: switch.turn_off
+      data_template:
+        entity_id: switch.twinkle_lights
+  desk_lamps:
+    friendly_name: "Desk Lamps"
+    turn_on:
+      service: switch.turn_on
+      data_template:
+        entity_id: switch.desk_lamps 
+    turn_off:
+      service: switch.turn_off
+      data_template:
+        entity_id: switch.desk_lamps 

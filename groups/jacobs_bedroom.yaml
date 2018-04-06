@@ -1,0 +1,5 @@
+jacobs_bedroom:
+  name: Jacob's Bedroom
+  entities:
+    - light.jacobs_ceiling_light
+    - light.jacobs_lamp

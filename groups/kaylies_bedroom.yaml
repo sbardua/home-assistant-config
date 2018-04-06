@@ -1,0 +1,5 @@
+kaylies_bedroom:
+  name: Kaylie's Bedroom
+  entities:
+    - light.kaylies_ceiling_light
+    - light.kaylies_lamp

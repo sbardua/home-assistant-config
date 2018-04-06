@@ -1,0 +1,3 @@
+platform: tplink
+host: !secret switch_twinkle_lights_hostname
+name: 'Twinkle Lights'

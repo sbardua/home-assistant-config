@@ -1,0 +1,11 @@
+#platform: mqtt_json
+#name: 'Office Lamp 1'
+#state_topic: 'AiLight-01C10A'
+#command_topic: 'AiLight-01C10A/set'
+#color_temp: true
+#brightness: true
+#rgb: true
+#white_value: true
+#effect: false
+#optimistic: false
+#retain: true
