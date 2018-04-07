@@ -76,7 +76,7 @@ hue:
   bridges:
     - host: !secret huebridge_hostname
       allow_unreachable: True
-      allow_in_emulated_hue: False
+#      allow_in_emulated_hue: False
       allow_hue_groups: True
 
 #insteon_local:

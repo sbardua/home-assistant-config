@@ -1,0 +1,44 @@
+light.floor_lamp_left_bottom:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:63:f6:3b-0b
+light.scotts_lamp:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:39:40:bd-0b
+light.floor_lamp_right_top:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:7a:03:00-0b
+light.floor_lamp_right_bottom:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:63:e8:c7-0b
+light.kaylies_ceiling_light:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:db:bf:2b-0b
+light.jacobs_ceiling_light:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:21:11:b1-0b
+light.scotts_office_lamp:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:3a:a3:df-0b
+light.kaylies_lamp:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:4c:05:a5-0b
+light.accent_light:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:db:d3:5d-0b
+light.michelles_lamp:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:4c:03:d4-0b
+light.floor_lamp_left_top:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:42:72:a6-0b
