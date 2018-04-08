@@ -1,7 +1,7 @@
 platform: template
 lights:
   jacobs_lamp:
-    friendly_name: "Jacobs Lamp"
+    friendly_name: "Jacob's Lamp"
     turn_on:
       service: switch.turn_on
       data_template:

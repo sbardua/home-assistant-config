@@ -26,8 +26,8 @@ sun:
 #emulated_hue:
 #snips:
 
-cloud:
-  alexa:
+alexa:
+  smart_home:
     filter:
       include_domains:
         - light
@@ -52,14 +52,14 @@ panel_iframe:
     icon: mdi:block-helper
     url: !secret pihole_hostname
 
-tts:
-  - platform: google
-  - platform: amazon_polly
-    aws_access_key_id: !secret aws_access_key_id
-    aws_secret_access_key: !secret aws_secret_access_key
-    region_name: !secret aws_region
-    text_type: ssml
-    voice: Brian
+#tts:
+#  - platform: google
+#  - platform: amazon_polly
+#    aws_access_key_id: !secret aws_access_key_id
+#    aws_secret_access_key: !secret aws_secret_access_key
+#    region_name: !secret aws_region
+#    text_type: ssml
+#    voice: Brian
 
 #media_player:
 #  platform: mpd
