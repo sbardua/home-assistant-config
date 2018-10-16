@@ -9,6 +9,11 @@ homeassistant:
 
 http:
   api_password: !secret http_password
+  base_url: !secret http_base_url
+  ssl_certificate: /config/certificate.pem
+  ssl_key: /config/privkey.pem
+  ip_ban_enabled: True
+  login_attempts_threshold: 3
 
 discovery:
   ignore:
@@ -47,10 +52,10 @@ panel_iframe:
     title: Node-RED
     icon: mdi:nodejs
     url: !secret nodered_hostname
-  pihole:
-    title: Pi-hole
-    icon: mdi:block-helper
-    url: !secret pihole_hostname
+#  pihole:
+#    title: Pi-hole
+#    icon: mdi:block-helper
+#    url: !secret pihole_hostname
 
 #tts:
 #  - platform: google
@@ -78,12 +83,6 @@ hue:
       allow_unreachable: True
 #      allow_in_emulated_hue: False
       allow_hue_groups: True
-
-#insteon_local:
-#  host: !secret insteon_hostname
-#  username: !secret insteon_username
-#  password: !secret insteon_password
-#  timeout: 10
 
 light: !include_dir_list lights/
 switch: !include_dir_list switches/

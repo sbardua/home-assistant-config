@@ -5,7 +5,7 @@ hide_entity: True
 trigger:
   - platform: homeassistant
     event: start
-action: 
+action:
 #  - service: media_player.turn_on
 #    entity_id: media_player.mpd
   - service: tts.amazon_polly_say
