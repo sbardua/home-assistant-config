@@ -1,0 +1,6 @@
+outside:
+  name: Outside
+  entities:
+    - light.porch_light
+    - light.holiday_lights_1
+    - light.holiday_lights_2

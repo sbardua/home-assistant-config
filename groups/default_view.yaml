@@ -3,8 +3,11 @@ default_view:
   view: yes
   entities:
     - group.family_room
+    - group.kitchen
+    - group.eating_area
     - group.play_room
     - group.office
     - group.master_bedroom
     - group.jacobs_bedroom
     - group.kaylies_bedroom
+    - group.outside

@@ -40,3 +40,23 @@ lights:
       service: switch.turn_off
       data_template:
         entity_id: switch.desk_lamps 
+  holiday_lights_1:
+    friendly_name: "Holiday Lights 1"
+    turn_on:
+      service: switch.turn_on
+      data_template:
+        entity_id: switch.holiday_lights_1
+    turn_off:
+      service: switch.turn_off
+      data_template:
+        entity_id: switch.holiday_lights_1
+  holiday_lights_2:
+    friendly_name: "Holiday Lights 2"
+    turn_on:
+      service: switch.turn_on
+      data_template:
+        entity_id: switch.holiday_lights_2
+    turn_off:
+      service: switch.turn_off
+      data_template:
+        entity_id: switch.holiday_lights_2

@@ -1,0 +1,5 @@
+eating_area:
+  name: Eating Area
+  entities:
+    - light.eating_light_1
+    - light.eating_light_2

@@ -1,0 +1,3 @@
+platform: tplink
+host: !secret switch_holiday_lights_1_hostname
+name: 'Holiday Lights 1'

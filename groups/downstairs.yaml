@@ -3,5 +3,7 @@ downstairs:
   view: yes
   entities:
     - group.family_room
+    - group.kitchen
+    - group.eating_area
     - group.play_room
     - group.office

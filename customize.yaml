@@ -6,6 +6,10 @@ switch.twinkle_lights:
   hidden: true
 switch.desk_lamps:
   hidden: true
+switch.holiday_lights_1:
+  hidden: true
+switch.holiday_lights_2:
+  hidden: true
 light.family_room:
   hidden: true
 light.jacobs_room:
@@ -26,17 +30,21 @@ light.floor_lamp_right_top:
   hidden: true
 group.family_room:
     order: 1
-group.play_room:
+group.kitchen:
     order: 2
-group.office:
+group.eating_area:
     order: 3
-group.master_bedroom:
+group.play_room:
     order: 4
-group.jacobs_bedroom:
+group.office:
     order: 5
-group.kaylies_bedroom:
+group.master_bedroom:
     order: 6
-group.upstairs:
+group.jacobs_bedroom:
     order: 7
-group.downstairs:
+group.kaylies_bedroom:
     order: 8
+group.upstairs:
+    order: 9
+group.downstairs:
+    order: 10
