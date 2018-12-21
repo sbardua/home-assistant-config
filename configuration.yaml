@@ -29,23 +29,23 @@ logbook:
 map:
 sun:
 #emulated_hue:
-#snips:
+snips:
 
-alexa:
-  smart_home:
-    filter:
-      include_domains:
-        - light
-      exclude_entities:
-        - light.family_room
-        - light.jacobs_room
-        - light.kaylies_room
-        - light.master_bedroom
-        - light.office
-        - light.floor_lamp_left_bottom
-        - light.floor_lamp_left_top
-        - light.floor_lamp_right_bottom
-        - light.floor_lamp_right_top
+#alexa:
+#  smart_home:
+#    filter:
+#      include_domains:
+#        - light
+#      exclude_entities:
+#        - light.family_room
+#        - light.jacobs_room
+#        - light.kaylies_room
+#        - light.master_bedroom
+#        - light.office
+#        - light.floor_lamp_left_bottom
+#        - light.floor_lamp_left_top
+#        - light.floor_lamp_right_bottom
+#        - light.floor_lamp_right_top
 
 panel_iframe:
   nodered:
@@ -71,7 +71,8 @@ panel_iframe:
 #  host: !secret mopidy_hostname
 
 mqtt:
-  broker: mosquitto
+  broker: !secret mqtt_broker
+  port: !secret mqtt_port
   username: !secret mqtt_username
   password: !secret mqtt_password
   discovery: false
@@ -90,4 +91,4 @@ switch: !include_dir_list switches/
 group: !include_dir_merge_named groups/
 #automation: !include_dir_list automations/
 script: !include_dir_merge_named scripts/
-#intent_script: !include_dir_merge_named intents/
+intent_script: !include_dir_merge_named intents/

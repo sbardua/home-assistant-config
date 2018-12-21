@@ -1,71 +1,83 @@
-Alpha:ActivateLightColor:
-  speech:
-    text: Ok
-  card:
-    type: simple
-    title: Turn object on
-    content: Ask Home Assistant to turn {{ objectLocation | replace(" ", "_") }} on
+lightsSet:
   action:
     - service: homeassistant.turn_on
       data_template:
-        entity_id: >
-          {%- if objectLocation.lower() in ['kitchen'] -%}
-            switch.{{ objectLocation | replace(" ", "_") }}
-          {%- elif objectLocation.lower() in ['family room'] -%}
-            group.{{ objectLocation | replace(" ", "_") }}
-          {%- else -%}
-            light.{{ objectLocation | replace(" ", "_") }}
-          {%- endif -%}
-    - service: tts.amazon_polly_say
-      data_template:
-        entity_id: media_player.mpd
-        message: "<speak>Ok</speak>"
+        entity_id: group.{{ house_room | replace(" ","_") }}
 
-Alpha:ActivateObject:
-  speech:
-    text: Ok
-  card:
-    type: simple
-    title: Turn object on
-    content: Ask Home Assistant to turn {{ objectLocation | replace(" ", "_") }} on
-  action:
-    - service: homeassistant.turn_on
-      data_template:
-        entity_id: >
-          {%- if objectLocation.lower() in ['kitchen'] -%}
-            switch.{{ objectLocation | replace(" ", "_") }}
-          {%- elif objectLocation.lower() in ['family room'] -%}
-            group.{{ objectLocation | replace(" ", "_") }}
-          {%- else -%}
-            light.{{ objectLocation | replace(" ", "_") }}
-          {%- endif -%}
-    - service: tts.amazon_polly_say
-      data_template:
-        entity_id: media_player.mpd
-        message: "<speak>Ok</speak>"
-
-Alpha:DeactivateObject:
-  speech:
-    text: Ok
-  card:
-    type: simple
-    title: Turn object off
-    content: Ask Home Assistant to turn {{ objectType | replace(" ", "_") }} off
+lightsTurnOff:
   action:
     - service: homeassistant.turn_off
       data_template:
-        entity_id: >
-          {%- if objectLocation.lower() in ['kitchen'] -%}
-            switch.{{ objectLocation | replace(" ", "_") }}
-          {%- elif objectLocation.lower() in ['family room'] -%}
-            group.{{ objectLocation | replace(" ", "_") }}
-          {%- else   -%}
-            light.{{ objectLocation | replace(" ", "_") }}
-          {%- endif -%}
-    - service: tts.amazon_polly_say
-      data_template:
-        entity_id: media_player.mpd
-        message: "<speak>Ok</speak>"
+        entity_id: group.{{ house_room | replace(" ","_") }}
+
+#Alpha:ActivateLightColor:
+#  speech:
+#    text: Ok
+#  card:
+#    type: simple
+#    title: Turn object on
+#    content: Ask Home Assistant to turn {{ objectLocation | replace(" ", "_") }} on
+#  action:
+#    - service: homeassistant.turn_on
+#      data_template:
+#        entity_id: >
+#          {%- if objectLocation.lower() in ['kitchen'] -%}
+#            switch.{{ objectLocation | replace(" ", "_") }}
+#          {%- elif objectLocation.lower() in ['family room'] -%}
+#            group.{{ objectLocation | replace(" ", "_") }}
+#          {%- else -%}
+#            light.{{ objectLocation | replace(" ", "_") }}
+#          {%- endif -%}
+#    - service: tts.amazon_polly_say
+#      data_template:
+#        entity_id: media_player.mpd
+#        message: "<speak>Ok</speak>"
+
+#Alpha:ActivateObject:
+#  speech:
+#    text: Ok
+#  card:
+#    type: simple
+#    title: Turn object on
+#    content: Ask Home Assistant to turn {{ objectLocation | replace(" ", "_") }} on
+#  action:
+#    - service: homeassistant.turn_on
+#      data_template:
+#        entity_id: >
+#          {%- if objectLocation.lower() in ['kitchen'] -%}
+#            switch.{{ objectLocation | replace(" ", "_") }}
+#          {%- elif objectLocation.lower() in ['family room'] -%}
+#            group.{{ objectLocation | replace(" ", "_") }}
+#          {%- else -%}
+#            light.{{ objectLocation | replace(" ", "_") }}
+#          {%- endif -%}
+#    - service: tts.amazon_polly_say
+#      data_template:
+#        entity_id: media_player.mpd
+#        message: "<speak>Ok</speak>"
+
+#Alpha:DeactivateObject:
+#  speech:
+#    text: Ok
+#  card:
+#    type: simple
+#    title: Turn object off
+#    content: Ask Home Assistant to turn {{ objectType | replace(" ", "_") }} off
+#  action:
+#    - service: homeassistant.turn_off
+#      data_template:
+#        entity_id: >
+#          {%- if objectLocation.lower() in ['kitchen'] -%}
+#            switch.{{ objectLocation | replace(" ", "_") }}
+#          {%- elif objectLocation.lower() in ['family room'] -%}
+#            group.{{ objectLocation | replace(" ", "_") }}
+#          {%- else   -%}
+#            light.{{ objectLocation | replace(" ", "_") }}
+#          {%- endif -%}
+#    - service: tts.amazon_polly_say
+#      data_template:
+#        entity_id: media_player.mpd
+#        message: "<speak>Ok</speak>"
 
 #lightsTurnOnSet:
 #  speech:
